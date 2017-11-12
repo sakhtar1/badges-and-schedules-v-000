@@ -5,13 +5,13 @@ def badge_maker(attendees)
 end
 
 def batch_badge_creator(attendees)
-  attendees.each do |badge|
+  attendees.collect do |badge|
      puts "Hello, my name is #{badge}."
   end
 end
 
 def assign_rooms(attendees)
-  attendees.each.with_index(1) do |attendee,index|
+  attendees.collect.with_index(1) do |attendee,index|
     puts "Hello, #{attendee}! You'll be assigned to room #{index}!"
   end
 end
