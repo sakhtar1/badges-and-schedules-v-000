@@ -17,7 +17,12 @@ def assign_rooms(attendees)
 end
 
 
-def printer(badgeRoom)
-   badgeRoom = batch_badge_creator(attendees) + assign_rooms(attendees)
-   badgeRoom.join(",")
+def printer(attendees)
+  attendees.each do |badge|
+      "Hello, my name is #{badge}."
+  end
+  attendees.each.with_index(1) do |attendee,index|
+    "Hello, #{attendee}! You'll be assigned to room #{index}!"
+  end
+  
 end
