@@ -18,11 +18,12 @@ end
 
 
 def printer(attendees)
-  attendees.each do |badge|
-      "Hello, my name is #{badge}."
+  
+  batch_badge_creator(attendees).each do |attendee|
+    puts attendee
   end
-  attendees.each.with_index(1) do |attendee,index|
-    "Hello, #{attendee}! You'll be assigned to room #{index}!"
+  assign_rooms(attendees).each do |attendee|
+    puts attendee
   end
 
 end
